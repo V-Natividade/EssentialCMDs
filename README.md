@@ -1,7 +1,7 @@
-EssentialCmds ![Badge](https://img.shields.io/github/license/vnatividade/EssentialCMDs) ![Badge](https://img.shields.io/date/1617215649)
+EssentialCmds ![Badge](https://img.shields.io/github/license/V-Natividade/EssentialCMDs) ![Badge](https://img.shields.io/date/1617215649)
 =============
 
-**Em desenvolvimento**
+**Em desenvolvimento** 🚧
 
 > Compilado de comandos que já salvaram um dia 😜
 
@@ -12,11 +12,11 @@ Lista de comandos:
 - [Terminal](TERMINAL.md)
 - [Psql](PSQL.md)
 
-## Tarefas
+## Tarefas 📝
 
 - [ ] Juntar um compilado maior de comandos
 
-## Contribuindo
+## Contribuindo 🎉
 
 Toda contribuição será muito bem recebida, fique à vontade para fazer a sua!!
 
@@ -28,7 +28,7 @@ Siga os passos:
 5. Empurre suas modificações (git push origin feature/fooBar)
 6. Abra um Pull Request
 
-## Licença
+## Licença 📖
 
 Repositório licenciaiado sob os termos da [Licença MIT].
 
