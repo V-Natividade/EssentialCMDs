@@ -208,7 +208,7 @@ git rebase -i <ramo>
 
 ##### Para transformar `n` *commits* em um único que contenha todas as alterações desses commmits
 
-###### não funciona se for o *commit* inicial do repositório
+###### (não funciona se for o *commit* inicial do repositório)
 
 ```
 git rebase -i HEAD~n
