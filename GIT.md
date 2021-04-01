@@ -206,16 +206,19 @@ git rebase -i <ramo>
 
 ###### Isso irá abrir a linha de comando do editor de texto de sua máquina (`nano` ou `vim`, provavelmente).
 
-##### Para transformar `n` *commits* em um único que contenha todas as alterações desses commmits (não funciona se for o *commit* inicial do repositório), execute
+##### Para transformar `n` *commits* em um único que contenha todas as alterações desses commmits
+
+###### não funciona se for o *commit* inicial do repositório
+
 ```
 git rebase -i HEAD~n
 ```
 
 ##### Isso irá abrir a linha de comando do editor de texto de sua máquina. Siga os passos:
 
-###### 1. Deixe o primeiro *commit* como `pick`, para manter a mensagem ou, altere para `reword` para escrever uma nova mensagem. 
+###### 1. Deixe o primeiro *commit* como `pick`, para manter a mensagem ou, altere para `reword` para escrever uma nova mensagem.
 
-###### 2. Mude os outros para `squash`, caso queria manter as mensagens deles, se caso negativo, troque para `fixup`, para usar somente a mensagem do primeiro *commit*. 
+###### 2. Mude os outros para `squash`, caso queria manter as mensagens deles, se caso negativo, troque para `fixup`, para usar somente a mensagem do primeiro *commit*.
 
 ###### 3. Digite a mensagem desse novo *commit*.
 
