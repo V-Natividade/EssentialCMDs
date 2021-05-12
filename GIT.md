@@ -1,7 +1,6 @@
-Comandos Git
-=============
+# Comandos Git
 
->Retornar a página **[inicial](README.md)**
+> Retornar a página **[inicial](README.md)**
 
 ## Sumário
 
@@ -26,7 +25,7 @@ Git é um sistema de controle de versão distribuída de código aberto. Ele bas
 
 #### Linux
 
-```
+```bash
 sudo apt-get install git
 ```
 
@@ -34,7 +33,7 @@ sudo apt-get install git
 
 ###### Para verificar a versão instalada, no Terminal do Linux/Windows PowerShell
 
-```
+```bash
 git --version
 ```
 
@@ -42,21 +41,20 @@ git --version
 
 ###### Esse material é apenas um resumo, para ver a documentação completa do `Git`
 
-```
+```bash
 git --help
 ```
 
 #### Global (em toda a máquina)
 
-```
+```bash
 git config --global user.name "<nome de usuário>"
 git config --global user.email "<email>"
 ```
 
-
 #### Local (único projeto)
 
-```
+```bash
 git config user.name "<nome de usuário>"
 git config user.email "<email>"
 ```
@@ -71,19 +69,19 @@ git config --list
 
 #### Editar
 
-```
+```bash
 git config -e
 ```
 
 #### Iniciar repositório
 
-```
+```bash
 git init
 ```
 
 #### Baixar repositório
 
-```
+```bash
 git clone <endereco>
 ```
 
@@ -91,28 +89,29 @@ git clone <endereco>
 
 #### Repositório nomeado
 
-```
+```bash
 git remote add <nome> <endereço>
 ```
+
 ###### alterando `<endereco>` pelo endereço do repositório remoto.
 
 ## Rastreamento
 
-##### Para mostrar o estado (em relação à arquivos não rastreados/modificados/deletados e a fila de espera de arquivos a serem *commitados*)
+##### Para mostrar o estado (em relação à arquivos não rastreados/modificados/deletados e a fila de espera de arquivos a serem _commitados_)
 
-```
+```bash
 git status
 ```
 
 #### Logs
 
-```
+```bash
 git log --all --decorate --oneline --graph
 ```
 
 #### Nome do repositório
 
-```
+```bash
 git remote show
 ```
 
@@ -120,71 +119,89 @@ git remote show
 
 ## Commits
 
-##### Para adicionar todos os arquivos alterados, no nível do diretório, à fila de espera a serem *commitados*
+##### Para adicionar todos os arquivos alterados, no nível do diretório, à fila de espera a serem _commitados_
 
-```
+```bash
 git add .
 ```
 
-##### Para adicionar todos os arquivos alterados à fila de espera a serem *commitados*, execute:
+##### Para adicionar todos os arquivos alterados à fila de espera a serem _commitados_, execute:
 
-```
+```bash
 git add -A
 ```
 
-###### Opção `-A` de `all`.
+###### Opção `-A` de `all`
 
 #### Commitar
 
-```
+```bash
 git commit -m "<mensagem>"
 ```
 
 ###### alterando `<mensagem>` e pela mensagem desejada. Opção `-m` de `message`.
 
-#### Enviar commits
+#### Enviar commit
 
-```
+```bash
 git push <repositorio> <ramo>
+```
+
+#### Forçar envio de commit
+
+```bash
+git push <repositorio> <ramo> --force
 ```
 
 ###### se usada a opção `-u` (de `upstream`), não é necessário passar o repositório e ramo nas próximas vezes que usar os comandos `push` ou `pull`.
 
-##### *Mergear* as alterações da `branch` nomeada `<ramo>` na `branch` em que se encontra
+##### _Mergear_ as alterações da `branch` nomeada `<ramo>` na `branch` em que se encontra
 
-```
+```bash
 git merge <ramo>
 ```
 
 #### Alterar autor
 
-```
+```bash
 git commit --amend --author="name <email>"
+```
+
+#### Voltar para um commit específico
+
+```bash
+git reset --hard <HASH OF THE COMMIT>
+```
+
+#### Alterar a mensagem de um commit
+
+```bash
+git commit --fixup <HASH OF THE COMMIT "Commit msg example">
 ```
 
 ## Branch
 
 #### Listar
 
-```
+```bash
 git branch
 ```
 
 #### Alterar
 
-```
+```bash
 git checkout <ramo>
 ```
 
 #### Criar e entrar
 
-```
+```bash
 git checkout -b <ramo>
 ```
 
 #### Deletar
 
-```
+```bash
 git branch -D <ramo>
 ```
 
@@ -192,7 +209,7 @@ git branch -D <ramo>
 
 #### Atualizar
 
-```
+```bash
 git pull <repositorio> <ramo>
 ```
 
@@ -200,30 +217,32 @@ git pull <repositorio> <ramo>
 
 #### Atualizar
 
-```
+```bash
 git rebase -i <ramo>
 ```
 
 ###### Isso irá abrir a linha de comando do editor de texto de sua máquina (`nano` ou `vim`, provavelmente).
 
-##### Para transformar `n` *commits* em um único que contenha todas as alterações desses commmits
+##### Para transformar `n` _commits_ em um único que contenha todas as alterações desses commmits
 
-###### (não funciona se for o *commit* inicial do repositório)
+###### (não funciona se for o _commit_ inicial do repositório)
 
-```
+```bash
 git rebase -i HEAD~n
 ```
 
-##### Isso irá abrir a linha de comando do editor de texto de sua máquina. Siga os passos:
+##### Isso irá abrir a linha de comando do editor de texto de sua máquina. Siga os passos
 
-###### 1. Deixe o primeiro *commit* como `pick`, para manter a mensagem ou, altere para `reword` para escrever uma nova mensagem.
+###### 1. Deixe o primeiro _commit_ como `pick`, para manter a mensagem ou, altere para `reword` para escrever uma nova mensagem
 
-###### 2. Mude os outros para `squash`, caso queria manter as mensagens deles, se caso negativo, troque para `fixup`, para usar somente a mensagem do primeiro *commit*.
+###### 2. Mude os outros para `squash`, caso queria manter as mensagens deles, se caso negativo, troque para `fixup`, para usar somente a mensagem do primeiro _commit_
 
-###### 3. Digite a mensagem desse novo *commit*.
+###### 3. Digite a mensagem desse novo _commit_
 
-##### Como foram apagados os *commit* anteriores, para enviar as alterações para o repositório remoto, será necessário usar a opção `-f` (de `force`) no comando de `push`. Exemplo:
-```
+##### Como foram apagados os _commit_ anteriores, para enviar as alterações para o repositório remoto, será necessário usar a opção `-f` (de `force`) no comando de `push`. Exemplo
+
+```bash
 git push -f origin feature/new-site-section
 ```
-#### Mais esclarecimentos sobre o rebase, [aqui](https://medium.com/@slamflipstrom/a-beginners-guide-to-squashing-commits-with-git-rebase-8185cf6e62ec).
+
+#### Mais esclarecimentos sobre o rebase, [aqui](https://medium.com/@slamflipstrom/a-beginners-guide-to-squashing-commits-with-git-rebase-8185cf6e62ec)
