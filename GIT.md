@@ -139,6 +139,12 @@ git add -A
 git commit -m "<mensagem>"
 ```
 
+#### Alterar a mensagem de um commit
+
+```bash
+git commit --fixup <HASH OF THE COMMIT "Commit msg example">
+```
+
 ###### alterando `<mensagem>` e pela mensagem desejada. Opção `-m` de `message`.
 
 #### Enviar commit
@@ -171,12 +177,6 @@ git commit --amend --author="name <email>"
 
 ```bash
 git reset --hard <HASH OF THE COMMIT>
-```
-
-#### Alterar a mensagem de um commit
-
-```bash
-git commit --fixup <HASH OF THE COMMIT "Commit msg example">
 ```
 
 ## Branch
