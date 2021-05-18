@@ -1,4 +1,4 @@
-EssentialCmds ![Badge](https://img.shields.io/github/license/V-Natividade/EssentialCMDs) ![Badge](https://img.shields.io/date/1617215649)
+Essential Cmds ![Badge](https://img.shields.io/github/license/V-Natividade/EssentialCMDs) ![Badge](https://img.shields.io/date/1617215649)
 =============
 
 **Em desenvolvimento** 🚧
