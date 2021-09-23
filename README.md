@@ -8,9 +8,6 @@ Essential Cmds ![Badge](https://img.shields.io/github/license/V-Natividade/Essen
 Lista de comandos:
 
 - [Git](GIT.md)
-- [Python](PYTHON.md)
-- [Terminal](TERMINAL.md)
-- [Psql](PSQL.md)
 
 ## Tarefas 📝
 
